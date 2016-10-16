@@ -101,6 +101,9 @@ $(document).ready(function(){
 			content = btn.siblings('.js-text');
 
 		btn.on('click', function () {
+			$(this).text(function(i, text) {
+				return text === 'Скрыть' ? 'Подробнее': 'Скрыть';   // toggle button text
+			});
 			content.slideToggle();
 		});
 	})();

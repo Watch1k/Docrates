@@ -445,8 +445,88 @@ img
 /* Work
 	----------------------------------- */
 .work
-	height: 1000px
-
+	position: relative
+	background: url('../img/bg/work-bg.jpg') center center no-repeat
+	background-size: cover
+	padding-bottom: 6px
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 6px
+		background-color: #ffffff
+	&-for
+		&__container
+			height: 594px
+			min-height: 594px
+			+vertical
+			text-align: left
+		&__in
+			margin-top: -60px
+			display: inline-block
+			vertical-align: middle
+			padding-left: 60px
+		&__title
+			position: relative
+			font-size: 30px
+			color: #b91443
+			text-transform: uppercase
+			&:before
+				content: ''
+				top: 15px
+				left: -40px
+				position: absolute
+				width: 10px
+				height: 10px
+				background-color: #b91443
+				transform: rotate(45deg)
+		&__text
+			margin-top: 25px
+			max-width: 500px
+			font-size: 16px
+	&-nav
+		background-color: rgba(0, 0, 0, .8)
+		&__container
+			font-size: 0
+		&__item
+			position: relative
+			cursor: pointer
+			display: inline-block
+			margin-right: -1px
+			padding-top: 35px
+			width: 20%
+			height: 120px
+			text-align: center
+			font-size: 16px
+			color: #ffffff
+			line-height: 1.06
+			text-transform: uppercase
+			& + &
+				&:before
+					position: absolute
+					left: 0
+					top: 30px
+					height: 63px
+					width: 1px
+					background-color: #828281
+					content: ''
+			&.is-active
+				color: #b91443
+				background-color: #ffffff
+				z-index: 1
+				&:before
+					content: none
+					display: none
+				&:after
+					position: absolute
+					top: -8px
+					left: 0
+					right: 0
+					background-color: #ffffff
+					height: 8px
+					content: ''
 
 
 /* ===================================
