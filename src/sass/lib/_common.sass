@@ -103,8 +103,20 @@ img
 		+trs
 		&:hover
 			background-color: transparent
-
-
+	&_white
+		border: 1px solid #FFFFFF
+		background-color: transparent
+		+trs
+		&:hover
+			border-color: #b91443
+			background-color: #b91443
+	&_lg
+		padding-left: 48px
+		padding-right: 48px
+		border-width: 2px
+		height: 66px
+		font-size: 22px
+		line-height: 66px
 
 /* ===================================
 	 Header
@@ -123,16 +135,6 @@ img
 		height: 48px
 		text-align: center
 		background-color: #000000
-		&:after
-			pointer-events: none
-			content: ''
-			position: absolute
-			top: -48px
-			left: 0
-			right: 0
-			height: 300px
-			width: 100%
-			background: url('../img/bg/header-bg.png') left top repeat-x
 	&__nav
 		position: relative
 		z-index: 1
@@ -219,6 +221,36 @@ img
 	 Main
 	 =================================== */
 .main
+
+/* Start
+	----------------------------------- */
+.start
+	position: relative
+	height: 600px
+	color: #ffffff
+	background: url('../img/bg/start.jpg') center center no-repeat
+	background-size: cover
+	&:after
+		pointer-events: none
+		content: ''
+		position: absolute
+		top: -48px
+		left: 0
+		right: 0
+		height: 300px
+		width: 100%
+		background: url('../img/bg/header-bg.png') left top repeat-x
+	&__container
+		height: 100%
+		+vertical
+	&__in
+		position: relative
+		display: inline-block
+		vertical-align: middle
+	&__title
+		font-size: 49px
+		margin-bottom: 25px
+
 
 
 /* ===================================
