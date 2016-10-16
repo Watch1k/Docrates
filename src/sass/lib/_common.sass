@@ -322,7 +322,10 @@ img
 		width: 284px
 		height: 284px
 		border-radius: 50%
-		border: 1px solid #fff
+		border: 2px solid #fff
+		+trs
+		&:hover
+			border-color: #b91443
 	&__img
 		min-width: 100%
 		max-width: none
@@ -515,6 +518,9 @@ img
 			line-height: 1.06
 			text-transform: uppercase
 			letter-spacing: 0.1em
+			+trs
+			&:hover
+				color: #848484
 			& + &
 				&:before
 					position: absolute
@@ -591,6 +597,7 @@ img
 		margin-top: 65px
 		+pie-clearfix
 	&__item
+		cursor: pointer
 		float: left
 		width: 20%
 		text-align: center
@@ -612,12 +619,19 @@ img
 			height: 206px
 			border-radius: 50%
 			border: 2px solid #fff
+			+trs
+		&:hover
+			&:before
+				border-color: #b91443
 	&__subtitle
 		margin-bottom: 20px
 		font-size: 19px
 		color: #b91443
 		text-transform: uppercase
 		letter-spacing: 0.24em
+		+trs
+		&:hover
+			color: #000000
 	&__text
 		margin-left: auto
 		margin-right: auto
@@ -672,9 +686,292 @@ img
 		font-size: 18px
 		line-height: 1.22
 		text-transform: uppercase
+
+/* Feed
+	----------------------------------- */
+.feed
+	padding-top: 115px
+	padding-bottom: 160px
+	&__row
+		display: table
+		width: 100%
+		margin-bottom: 55px
+	&__col
+		display: table-cell
+		position: relative
+		width: 50%
+		padding-left: 35px
+		padding-right: 75px
+	&__item
+		margin-top: 55px
+		+pie-clearfix
+	&__image
+		float: left
+		margin-right: 20px
+		width: 39px
+		height: 39px
+		padding: 3px
+		border-radius: 50%
+		box-shadow: 0 0 0 1px #f2d3b5
+		&-wrap
+			overflow: hidden
+			width: 100%
+			height: 100%
+			border-radius: 50%
+	&__content
+		overflow: hidden
+		line-height: 1.18
+	&__subtitle
+		position: relative
+		margin-bottom: 22px
+		font-size: 19px
+		color: #b91443
+		&-date
+			color: #868686
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -11px
+			width: 42px
+			height: 2px
+			background-color: #b91443
+	&__text
+		color: #000
+		&-link
+			margin-left: 5px
+			color: #7083b9
+			text-decoration: underline
+			+trs
+			&:hover
+				color: #b91443
+	&__btn
+		display: block
+		margin-top: 20px
+		margin-left: auto
+		margin-right: auto
+		width: 216px
+		height: 50px
+		font-size: 16px
+		color: #000000
+		text-align: center
+		line-height: 50px
+		text-transform: uppercase
+		border: 1px solid rgba(0,0,0,.3)
+		+trs
+		&:hover
+			color: #b91443
+			border-color: #b91443
 		
-
-
+/* Request
+	----------------------------------- */
+.request
+	padding-top: 90px
+	padding-bottom: 105px
+	background: url(../img/bg/request.jpg) center center no-repeat
+	background-size: cover
+	&__title
+		color: #ffffff
+	
+.form
+	margin-top: 45px
+	margin-left: auto
+	margin-right: auto
+	max-width: 595px
+	letter-spacing: 0.08em
+	&__field
+		position: relative
+		+pie-clearfix
+		& + &
+			margin-top: 7px
+		&_md
+			margin-top: 17px!important
+		&_lg
+			margin-top: 36px!important
+	.icon-required
+		position: absolute
+		top: 0
+		left: 100%
+		margin-left: 15px
+		font-size: 30px
+		color: #ffffff
+	&__input
+		display: block
+		padding: 0 13px
+		width: 100%
+		height: 40px
+		font-size: 16px
+		color: rgba(0, 29, 49, .9)
+		line-height: 40px
+		background-color: #ffffff
+		border: 1px solid #d0d0d0
+		text-transform: uppercase
+		+placeholder-color(rgba(0, 29, 49, .9))
+		&:focus ~ .form__tooltip
+			opacity: 1
+	&__area
+		display: block
+		padding: 10px 13px
+		height: 125px
+		vertical-align: top
+		width: 100%
+		font-size: 16px
+		color: rgba(0, 29, 49, .9)
+		line-height: 1.5
+		text-transform: uppercase
+		resize: none
+		border: 1px solid #d0d0d0
+		+placeholder-color(rgba(0, 29, 49, .9))
+	&__tooltip
+		position: absolute
+		top: 0
+		left: 100%
+		padding: 15px 35px
+		white-space: nowrap
+		margin-left: 40px
+		font-size: 18px
+		line-height: 1
+		background-color: rgba(255, 255, 255, .5)
+		border-radius: 5px
+		pointer-events: none
+		opacity: 0
+		letter-spacing: -0.02em
+		+trs
+		&:before
+			position: absolute
+			left: -8px
+			top: 15px
+			+arr(8,16,rgba(255, 255, 255, .5),l)
+			content: ''
+	.previous-file
+		position: absolute
+		top: 100%
+		left: 0
+		display: block
+		color: #ffffff
+		width: 100%
+	.remove-btn
+		margin-left: 10px
+		color: #ffffff
+	.upload-btn
+		cursor: pointer
+		width: 218px
+		height: 43px
+		border: 1px solid white
+		font-size: 14px
+		color: #ffffff
+		line-height: 43px
+		text-transform: uppercase
+		+trs
+	.upload-button
+		&:hover
+			.upload-btn
+				color: #b91443
+				background-color: #ffffff
+	input[type='file']
+		cursor: pointer
+	&__col
+		width: 50%
+		float: left
+	&__check
+		display: none
+		&-label
+			position: relative
+			display: block
+			margin-top: 2px
+			padding-top: 12px
+			float: right
+			padding-left: 5px
+			cursor: pointer
+			font-size: 18px
+			color: #ffffff
+			text-transform: uppercase
+			&:before
+				position: absolute
+				top: 2px
+				left: -55px
+				width: 33px
+				height: 33px
+				background-color: #ffffff
+				border: 1px solid #d0d0d0
+				content: ''
+			&:after
+				position: absolute
+				left: -45px
+				top: 15px
+				content: ''
+				width: 15px
+				height: 10px
+				background: url('../img/svg/check-original.svg') center center no-repeat
+				opacity: 0
+				+trs
+		&:checked + &-label
+			&:after
+				opacity: 1
+	&__captcha
+		float: right
+		margin-right: 25px
+		width: 148px
+		height: 40px
+	&__rel
+		position: relative
+		display: inline-block
+	&__code
+		margin-left: 25px
+		width: 148px
+	&__arrow
+		position: absolute
+		top: 9px
+		left: -10px
+		font-size: 18px
+		color: #ffffff
+	&__submit
+		display: block
+		margin-left: auto
+		margin-right: auto
+		width: 244px
+		height: 50px
+		font-size: 16px
+		color: #ffffff
+		text-align: center
+		text-transform: uppercase
+		border: 1px solid #fff
+		+trs
+		&:hover
+			background-color: #ffffff
+			color: #b91443
+	.form-error
+		display: none
+	.form__error
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+		width: auto
+		margin-top: 20px
+		padding: 15px 35px
+		white-space: nowrap
+		font-size: 18px
+		line-height: 1
+		background-color: rgba(255, 255, 255, .5)
+		border-radius: 5px
+		pointer-events: none
+		text-transform: uppercase
+		opacity: 0
+		color: #b91443
+		+trs
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -8px
+			margin-top: -8px
+			+arr(16,8,rgba(255, 255, 255, .5),t)
+	.has-error ~ .form__field
+		.form__error
+			opacity: 1
+		
 
 /* ===================================
 	 Other Styles

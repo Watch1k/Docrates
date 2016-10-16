@@ -208,5 +208,121 @@ block content
 		
 	//begin feed
 	.feed
-
+		.feed__container.container
+			.feed__row
+				.feed__col
+					.feed__title.title отзывы
+				.feed__col
+					.feed__title.title вопросы-ответы
+			.feed__row
+				.feed__col
+					.feed__image
+						.feed__img-wrap
+							img.feed__img(src='img/content/ava.png' alt='image')
+					.feed__content
+						.feed__subtitle
+							| Тамара C.,
+							span.feed__subtitle-date &nbsp;19.08.2016
+						.feed__text
+							| «Благодарю от всей души Марину, медсестру Екатерину и доктора Майго за высокий профессионализм, чуткость, терпение, внимание ко мне. Прекрасная гостиница, все отлично! Здоровья всем. Буду
+							a.feed__text-link(href='#') Читать далее
+				.feed__col
+					.feed__image
+						.feed__img-wrap
+							img.feed__img(src='img/content/ava.png' alt='image')
+					.feed__content
+						.feed__subtitle
+							| Ольга К.,
+							span.feed__subtitle-date &nbsp;10.01.2013
+						.feed__text
+							| Здравствуйте. Моей маме в ноябре 2015 г. была удалена родинка, подозрение на меланому, гистология - лентиго меланома in situ. Мы перепроверили стекла в больнице в
+							a.feed__text-link(href='#') Читать далее
+			.feed__row
+				.feed__col
+					.feed__image
+						.feed__img-wrap
+							img.feed__img(src='img/content/ava.png' alt='image')
+					.feed__content
+						.feed__subtitle
+							| Тамара C.,
+							span.feed__subtitle-date &nbsp;19.08.2016
+						.feed__text
+							| «Большое спасибо всем сотрудникам клиники Docrates за Ваше внимательное отношение. Очень благодарна докторам Maigo Riener и Jari Viinikainen за профессионализм и чуткость. Желаю Вам здоровья, удачи и исполнения всех желаний»
+							a.feed__text-link(href='#') Читать далее
+				.feed__col
+					.feed__image
+						.feed__img-wrap
+							img.feed__img(src='img/content/ava.png' alt='image')
+					.feed__content
+						.feed__subtitle
+							| Тамара C.,
+							span.feed__subtitle-date &nbsp;10.01.2013
+						.feed__text
+							| Процедура наружной лучевой терапии похожа на обычное рентгеновское обследование. Радиация невидима, не имеет запаха и не ощущается, побочные эффекты не возникают до 2-й или 3-й недели лечения. Лучевая
+							a.feed__text-link(href='#') Читать далее
+			.feed__row
+				.feed__col
+					.feed__image
+						.feed__img-wrap
+							img.feed__img(src='img/content/ava.png' alt='image')
+					.feed__content
+						.feed__subtitle
+							| Анна Б.,
+							span.feed__subtitle-date &nbsp;10.09.2014
+						.feed__text
+							| «Мы с мамой хотим сказать огромное спасибо всей клинике Docrates. Мы очень рады, что попали к Вам. У Вас очень уютно, очень дружественно-настроенный персонал. Все очень заботливые и хорошие. И сама клиника. Будто как дома ).
+							a.feed__text-link(href='#') Читать далее
+				.feed__col
+					.feed__image
+						.feed__img-wrap
+							img.feed__img(src='img/content/ava.png' alt='image')
+					.feed__content
+						.feed__subtitle
+							| Анна Б.,
+							span.feed__subtitle-date &nbsp;10.01.2013
+						.feed__text
+							| В тех случаях, когда химиотерапия недостаточно эффективна, некоторые клетки опухоли под ее воздействием не погибают, а временно замедляют свои биологические процессы и не накапливают
+							a.feed__text-link(href='#') Читать далее
+			.feed__row
+				.feed__col
+					a.feed__btn(href='#') все отзывы
+				.feed__col
+					a.feed__btn(href='#') все отзывы
 	//end feed
+
+	//begin request
+	.request
+		.request__container.container
+			.request__title.title online заявка
+			form.form(action='#')
+				.form__field
+					input.form__input(type='text' placeholder='вас зовут' data-validation='required')
+					.icon-required *
+				.form__field
+					input.form__input(type='text' placeholder='тeлeфон')
+				.form__field
+					input.form__input(type='text' placeholder='E-mail' data-validation="email")
+					.icon-required *
+					.form__tooltip На этот E-mail  мы отправим ответ
+				.form__field
+					textarea.form__area(placeholder='вопрос / информация' data-validation="required")
+					.icon-required *
+				.form__field.form__field_md
+					.form__col
+						input.form__file(type='file')
+					.form__col
+						input.form__check(type='checkbox' id='check1')
+						label.form__check-label(for='check1') хочу скидку 10%
+				.form__field.form__field_lg
+					.form__col
+						.form__captcha
+							img(src='img/content/captcha.jpg' alt='image')
+					.form__col
+						.form__rel
+							.form__arrow →
+							input.form__input.form__code(type='text' placeholder='Код' data-validation='required')
+							.icon-required *
+				.form__field.form__field_lg
+					button.form__submit(type='submit') отправить
+					.form__error ошибка! заполнены не все поля
+	//end request

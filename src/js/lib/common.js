@@ -1,18 +1,25 @@
 /* Common JS */
-$(document).ready(function(){
+$(document).ready(function () {
 
 	//for IE9
 	svg4everybody();
 
+	//validate
+	$.validate({
+		validateOnBlur : true,
+		showHelpOnFocus : false,
+		addSuggestions : false
+	});
+
 	// Clear placeholder
-	(function() {
+	(function () {
 		var el = $('input, textarea');
-		el.focus(function(){
-			$(this).data('placeholder',$(this).attr('placeholder'));
-			$(this).attr('placeholder','');
+		el.focus(function () {
+			$(this).data('placeholder', $(this).attr('placeholder'));
+			$(this).attr('placeholder', '');
 		});
-		el.blur(function(){
-			$(this).attr('placeholder',$(this).data('placeholder'));
+		el.blur(function () {
+			$(this).attr('placeholder', $(this).data('placeholder'));
 		});
 	}());
 
@@ -23,8 +30,8 @@ $(document).ready(function(){
 			content = btn.siblings('.js-text');
 
 		btn.on('click', function () {
-			$(this).text(function(i, text) {
-				return text === 'Скрыть' ? 'Подробнее': 'Скрыть';   // toggle button text
+			$(this).text(function (i, text) {
+				return text === 'Скрыть' ? 'Подробнее' : 'Скрыть';   // toggle button text
 			});
 			content.slideToggle();
 		});
@@ -33,7 +40,7 @@ $(document).ready(function(){
 	(function () {
 		var slider = $('.js-slider-for'),
 			item = slider.children();
-			nav = slider.siblings('.js-slider-nav').children().children();
+		nav = slider.siblings('.js-slider-nav').children().children();
 
 		nav.on('click', function () {
 			var _this = $(this);
@@ -45,5 +52,15 @@ $(document).ready(function(){
 			$(this).addClass('is-active');
 		});
 	})();
-	
+
+	(function () {
+		$('input[type="file"]').inputfile({
+			uploadText: 'прикрепить файл',
+			removeText: '<span>Удалить</span>',
+			restoreText: '<span></span>',
+			uploadButtonClass: 'upload-btn',
+			removeButtonClass: 'remove-btn'
+		});
+	})();
+
 });
