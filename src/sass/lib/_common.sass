@@ -1,0 +1,227 @@
+// fonts
+$default-fonts: Arial, sans-serif
+
++font('Calibri', 'Calibri')
+
+=calibri
+	font-family: 'Calibri', $default-fonts
+
+// colors
+// $black: #000
+
+=trs
+	transition: all 0.2s
+
+
+/* ===================================
+	 Main Styles
+	 =================================== */
+body
+	position: relative
+	min-width: 320px
+	+calibri
+	font-size: 16px
+	color: #333
+	line-height: 1.25
+
+.wrapper
+	position: relative
+	overflow: hidden
+	margin: 0 auto
+	min-height: 100%
+
+.container
+	margin-left: auto
+	margin-right: auto
+	padding-left: 20px
+	padding-right: 20px
+	max-width: 1568px
+	+pie-clearfix
+
+
+/* Helpers
+	----------------------------------- */
+button
+	background-color: transparent
+
+a:hover, a:focus
+	text-decoration: none
+
+a
+	color: inherit
+	text-decoration: none
+
+table
+	vertical-align: top
+
+img
+	max-width: 100%
+	vertical-align: top
+
+.icon
+	display: inline-block
+	vertical-align: middle
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.is-hidden
+	display: none
+
+.vertical
+	display: inline-block
+	vertical-align: middle
+
+.cfx
+	+pie-clearfix
+
+// *
+// 	+selection
+// 		color: #fff
+// 		background-color: $red
+
+.btn
+	display: inline-block
+	padding-left: 30px
+	padding-right: 30px
+	height: 36px
+	white-space: nowrap
+	text-align: center
+	font-size: 14px
+	color: #ffffff
+	line-height: 36px
+	text-transform: uppercase
+	&_red
+		border: 1px solid #b91443
+		background-color: #b91443
+		+trs
+		&:hover
+			background-color: transparent
+
+
+
+/* ===================================
+	 Header
+	 =================================== */
+.header
+	position: fixed
+	z-index: 99
+	left: 0
+	top: 0
+	right: 0
+	color: #ffffff
+	.container
+		position: relative
+	&__top
+		position: relative
+		height: 48px
+		text-align: center
+		background-color: #000000
+		&:after
+			pointer-events: none
+			content: ''
+			position: absolute
+			top: -48px
+			left: 0
+			right: 0
+			height: 300px
+			width: 100%
+			background: url('../img/bg/header-bg.png') left top repeat-x
+	&__nav
+		position: relative
+		z-index: 1
+		padding-top: 14px
+	&__phone
+		position: absolute
+		z-index: 1
+		top: 13px
+		left: 20px
+		font-size: 21px
+		color: #ffe9be
+		line-height: 1
+	&__btn
+		position: absolute
+		z-index: 1
+		top: 5px
+		right: 20px
+	&__bot
+		position: relative
+	&__logo
+		float: left
+		margin-top: 13px
+	&__info
+		float: right
+		padding-top: 60px
+		+pie-clearfix
+	&__block
+		float: right
+		font-size: 20px
+	&__links
+		+pie-clearfix
+	&__link
+		float: left
+		text-decoration: underline
+		color: #ffffff
+		+trs
+		&:hover
+			color: #f2d3b5
+		& + &
+			margin-left: 15px
+		
+.soc
+	float: left
+	+pie-clearfix
+	&__item
+		float: left
+		font-size: 0
+		margin-right: 15px
+		.icon
+			display: inline-block
+		.icon + .icon
+			display: none
+		&:hover
+			.icon
+				display: none
+			.icon + .icon
+				display: inline-block
+		
+.nav
+	display: inline-block
+	vertical-align: middle
+	font-size: 16px
+	line-height: 20px
+	text-transform: uppercase
+	+pie-clearfix
+	&__link
+		float: left
+		margin-left: 22px
+		margin-right: 22px
+		color: #ffffff
+		+trs
+		&:hover
+			color: #7c7c7c
+	
+	
+
+/* ===================================
+	 Footer
+	 =================================== */
+.footer
+
+
+/* ===================================
+	 Main
+	 =================================== */
+.main
+
+
+/* ===================================
+	 Other Styles
+	 =================================== */
+

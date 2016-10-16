@@ -1,0 +1,34 @@
+header.header
+	.header__top
+		.container
+			.header__phone + 358 50 500 1899
+			// begin main-nav
+			nav.header__nav.nav
+				a.nav__link(href='#') почему мы?
+				a.nav__link(href='#') как мы работаем
+				a.nav__link(href='#') специалисты
+				a.nav__link(href='#') спецпредложения
+				a.nav__link(href='#') отзывы
+				a.nav__link(href='#') контакты
+			// end main-nav
+			button.header__btn.btn.btn_red(type='button') оставить заявку
+	.header__bot
+		.container
+			// begin logo
+			.header__logo.logo
+				a.logo__link(href="index.html")
+					+i('logo-original')
+			// end logo
+			.header__info
+				.soc
+					a.soc__item(href='#')
+						+i('fb')
+						+i('fb-hover')
+					a.soc__item(href='#')
+						+i('vk')
+						+i('vk-hover')
+				.header__block
+					.header__address Helsinki, Saukonpaadenranta 2
+					.header__links
+						a.header__link(href='#') Как нас найти
+						a.header__link(href='mailto:international@docrates.com') international@docrates.com
