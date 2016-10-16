@@ -449,6 +449,7 @@ img
 	background: url('../img/bg/work-bg.jpg') center center no-repeat
 	background-size: cover
 	padding-bottom: 6px
+	min-height: 600px
 	&:before
 		content: ''
 		position: absolute
@@ -458,6 +459,10 @@ img
 		height: 6px
 		background-color: #ffffff
 	&-for
+		&__item
+			display: none
+			&.is-active
+				display: block
 		&__container
 			height: 594px
 			min-height: 594px
@@ -527,6 +532,46 @@ img
 					background-color: #ffffff
 					height: 8px
 					content: ''
+		
+/* Spec
+	----------------------------------- */
+.spec
+	padding-top: 55px
+	padding-bottom: 100px
+	background: url(../img/bg/spec.jpg) center center no-repeat
+	background-size: cover
+	&__title
+		margin-bottom: 55px
+		color: #000000
+	&__block
+		position: relative
+		margin-left: 50%
+		padding: 50px 100px 60px 60px
+		color: #ffffff
+		background-color: rgba(185, 20, 67, .8)
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 100%
+			bottom: 0
+			width: 2600px
+			background-color: rgba(185, 20, 67, .8)
+	&__subtitle
+		padding-right: 20px
+		font-size: 26px
+		text-transform: uppercase
+	&__text
+		margin-top: 30px
+		font-size: 18px
+	&__btn
+		margin-top: 45px
+		width: 244px
+		&:hover
+			color: #b91443
+			background-color: #ffffff
+			border-color: #ffffff
+
 
 
 /* ===================================
