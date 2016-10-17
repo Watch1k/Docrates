@@ -24,7 +24,7 @@ $(document).ready(function () {
 		});
 	}());
 
-	// new WOW().init();
+	new WOW().init();
 
 	(function () {
 		var btn = $('.js-more'),
@@ -152,6 +152,43 @@ $(document).ready(function () {
 				descText.html(text.eq(descIndex));
 			}
 		});
+	})();
+
+	(function () {
+		var slider = $('.js-slider');
+
+		if ($(window).width() < 1600) {
+			slider.find('.wow').removeClass('wow');
+			slider.slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>'
+			});
+
+			var next = slider.find('.slick-next'),
+				nav = $('.js-slick-nav');
+
+			nav.prepend(next);
+		}
+
+		$(window).resize(function () {
+			if ($(window).width() < 1600) {
+				if (!$('.slick-initialized').length) {
+					slider.slick({
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>'
+					});
+
+					var next = slider.find('.slick-next'),
+						nav = $('.js-slick-nav');
+
+					nav.prepend(next);
+				}
+			} else {
+				slider.slick('unslick');
+			}
+		})
 	})();
 
 });
