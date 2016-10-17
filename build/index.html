@@ -186,7 +186,29 @@
                   </div>
                 </div>
                 <div class="text__row">
-                  <div class="text__col2"><img class="text__img" src="img/content/cert-1.png" alt="image"><img class="text__img" src="img/content/cert-2.png" alt="image"><img class="text__img" src="img/content/cert-3.png" alt="image"></div>
+                  <div class="text__col2">
+                    <a class="text__image" href="img/content/cert-1-original.png"><img class="text__img" src="img/content/cert-1.png" alt="image">
+                      <div class="text__image-icon">
+                        <svg class="icon icon-loop-original">
+                            <use xlink:href="img/sprite.svg#icon-loop-original"></use>
+                          </svg>
+                      </div>
+                    </a>
+                    <a class="text__image" href="img/content/cert-1-original.png"><img class="text__img" src="img/content/cert-2.png" alt="image">
+                      <div class="text__image-icon">
+                        <svg class="icon icon-loop-original">
+                            <use xlink:href="img/sprite.svg#icon-loop-original"></use>
+                          </svg>
+                      </div>
+                    </a>
+                    <a class="text__image" href="img/content/cert-1-original.png"><img class="text__img" src="img/content/cert-3.png" alt="image">
+                      <div class="text__image-icon">
+                        <svg class="icon icon-loop-original">
+                            <use xlink:href="img/sprite.svg#icon-loop-original"></use>
+                          </svg>
+                      </div>
+                    </a>
+                  </div>
                   <div class="text__col2">
                     <p class="text__text">На сегодняшнии день существует три основных метода лечения: хирургическое лечение, лучевая терапия и химиотерапия. Помимо этого, клиника Дократес имеет возможность проведения радионуклидно терапии, иммунотерапии, биологического лечения.
                       Также мы начинаем лечение препаратами онколитического вируса</p>
@@ -464,19 +486,73 @@
         </div>
       </div>
       <!--end request-->
+      <!--begin contact-->
+      <div class="contact">
+        <div class="contact__container container">
+          <div class="contact__title title">контакты</div>
+          <div class="contact__row">
+            <div class="contact__col">
+              <div class="contact__map" id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.2686766533288!2d24.907668716105977!3d60.15973088195706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a4e947eaa23%3A0xd77e29a934673d4e!2zVXR0ZXJow6RsbHNzdHJhbmRlbiAyLCAwMDE4MCBIZWxzaW5nZm9ycywg0KTRltC90LvRj9C90LTRltGP!5e0!3m2!1suk!2sua!4v1476664553819"
+                  width="100%" height="409" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="contact__col"><img class="contact__img" src="img/content/contact-2.jpg" alt="image"></div>
+          </div>
+          <div class="text-center"><a class="contact__link" href="#">Как к нам добраться из России</a><a class="contact__link" href="mailto:international@docrates.com">international@docrates.com</a><a class="contact__link" href="#">Как к нам добраться в Хельсинки</a></div>
+        </div>
+      </div>
+      <!--end contact-->
     </main>
   </div>
-  <!--block footToggle-->
-  <!--	-var footToggle = ''-->
-  <!--footer.footer-->
-  <!--	.container-->
-  <!--		span.footer__copy &copy; Template-->
-  <!--		nav.footer__nav-->
-  <!--			each value in footMenu-->
-  <!--				if footToggle === value-->
-  <!--					a.footer__nav-link.is-active(href='#')= value-->
-  <!--				else-->
-  <!--					a.footer__nav-link(href='#')= value-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo logo">
+        <a class="logo__link" href="index.html">
+          <svg class="icon icon-logo-original">
+              <use xlink:href="img/sprite.svg#icon-logo-original"></use>
+            </svg></a>
+      </div>
+      <div class="footer__info">
+        <div class="footer__soc">
+          <a class="footer__soc-item" href="#">
+            <svg class="icon icon-fb-2-original">
+                <use xlink:href="img/sprite.svg#icon-fb-2-original"></use>
+              </svg></a>
+          <a class="footer__soc-item" href="#">
+            <svg class="icon icon-vk-2-original">
+                <use xlink:href="img/sprite.svg#icon-vk-2-original"></use>
+              </svg></a>
+        </div>
+        <div class="footer__infos infos">
+          <div class="infos__col">
+            <div class="infos__col-in">
+              <div class="infos__text">Телефон:</div>
+              <div class="infos__subtext">+ 358 50 500 1899</div>
+            </div>
+          </div>
+          <div class="infos__col">
+            <div class="infos__col-in">
+              <div class="infos__text">Call центр:</div>
+              <div class="infos__subtext">+ 358 10 773 2050</div>
+            </div>
+          </div>
+          <div class="infos__col">
+            <div class="infos__col-in">
+              <div class="infos__text">Факс:</div>
+              <div class="infos__subtext">+ 358 10 773 2099</div>
+            </div>
+          </div>
+          <div class="infos__col">
+            <div class="infos__col-in">
+              <div class="infos__text">Стационар:</div>
+              <div class="infos__subtext">+ 358 9 162 0950</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/app.js"></script>
 </body>
 

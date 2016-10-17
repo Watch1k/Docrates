@@ -95,9 +95,18 @@ block content
 									li.text__item Клиника принимает медицинские документы на русском языке
 						.text__row
 							.text__col2
-								img.text__img(src='img/content/cert-1.png' alt='image')
-								img.text__img(src='img/content/cert-2.png' alt='image')
-								img.text__img(src='img/content/cert-3.png' alt='image')
+								a.text__image(href='img/content/cert-1-original.png')
+									img.text__img(src='img/content/cert-1.png' alt='image')
+									.text__image-icon
+										+i('loop-original')
+								a.text__image(href='img/content/cert-1-original.png')
+									img.text__img(src='img/content/cert-2.png' alt='image')
+									.text__image-icon
+										+i('loop-original')
+								a.text__image(href='img/content/cert-1-original.png')
+									img.text__img(src='img/content/cert-3.png' alt='image')
+									.text__image-icon
+										+i('loop-original')
 							.text__col2
 								p.text__text На сегодняшнии день существует три основных метода лечения: хирургическое лечение, лучевая терапия и химиотерапия. Помимо этого, клиника Дократес имеет возможность проведения радионуклидно терапии, иммунотерапии, биологического лечения. Также мы начинаем лечение препаратами онколитического вируса
 								p.text__text На сегодняшнии день существует три основных метода лечения: хирургическое лечение, лучевая терапия и химиотерапия. Помимо этого, клиника Дократес имеет возможность проведения радионуклидно терапии, иммунотерапии, биологического лечения. Также мы начинаем лечение препаратами онколитического вируса сегодняшнии день существует три основных метода лечения: хирургическое лечение, лучевая терапия и химиотерапия. Помимо этого, клиника Дократес имеет возможность Помимо этого, клиника Дократес имеет возможность проведения радионуклидно терапии, иммунотерапии, биологического лечения. Также мы начинаем лечение препаратами онколитического вируса
@@ -326,3 +335,19 @@ block content
 					button.form__submit(type='submit') отправить
 					.form__error ошибка! заполнены не все поля
 	//end request
+
+	//begin contact
+	.contact
+		.contact__container.container
+			.contact__title.title контакты
+			.contact__row
+				.contact__col
+					#map.contact__map
+						iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.2686766533288!2d24.907668716105977!3d60.15973088195706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920a4e947eaa23%3A0xd77e29a934673d4e!2zVXR0ZXJow6RsbHNzdHJhbmRlbiAyLCAwMDE4MCBIZWxzaW5nZm9ycywg0KTRltC90LvRj9C90LTRltGP!5e0!3m2!1suk!2sua!4v1476664553819" width="100%" height="409" frameborder="0" style="border:0" allowfullscreen)
+				.contact__col
+					img.contact__img(src='img/content/contact-2.jpg' alt='image')
+			.text-center
+				a.contact__link(href='#') Как к нам добраться из России
+				a.contact__link(href='mailto:international@docrates.com') international@docrates.com
+				a.contact__link(href='#') Как к нам добраться в Хельсинки
+	//end contact
