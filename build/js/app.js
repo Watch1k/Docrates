@@ -443,7 +443,31 @@ $(document).ready(function () {
 			btn = $('.js-request');
 
 		btn.on('click', function () {
-			$('html, body').animate({scrollTop: request.offset().top}, 1500);
+			$('html, body').animate({scrollTop: request.offset().top - 77}, 1500);
+		});
+	})();
+
+	(function(){
+		var link = $('.nav__link');
+
+		link.on('click', function (e) {
+			e.preventDefault();
+			link.removeClass('is-active');
+			$(this).addClass('is-active');
+			var id = $(this).attr('href');
+			$('html, body').animate({scrollTop: $(id).offset().top - 77}, 1500);
+		});
+	})();
+
+	(function () {
+		var btn = $('.js-more-btn');
+
+		btn.on('click', function (e) {
+			e.preventDefault();
+			$(this).text(function (i, text) {
+				return text === 'Читать далее' ? 'Скрыть' : 'Читать далее';   // toggle button text
+			});
+			$(this).prev().toggle();
 		});
 	})();
 

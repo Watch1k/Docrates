@@ -21,8 +21,10 @@
         <div class="container">
           <div class="header__phone">+ 358 50 500 1899</div>
           <!-- begin main-nav-->
-          <nav class="header__nav nav"><a class="nav__link" href="#">почему мы?</a><a class="nav__link" href="#">как мы работаем</a><a class="nav__link" href="#">специалисты</a><a class="nav__link" href="#">спецпредложения</a><a class="nav__link" href="#">отзывы</a><a class="nav__link"
-              href="#">контакты</a></nav>
+          <nav class="header__nav nav"><a class="nav__link" href="#why">почему мы?</a><a class="nav__link" href="#work">как мы работаем</a><a class="nav__link" href="#doc">специалисты</a><a class="nav__link" href="#spec">спецпредложения</a><a class="nav__link" href="#feed">отзывы</a>
+            <a
+              class="nav__link" href="#request">контакты</a>
+          </nav>
           <!-- end main-nav-->
           <button class="header__btn btn btn_red js-request" type="button">оставить заявку</button>
         </div>
@@ -127,7 +129,7 @@
       </div>
       <!--end service-->
       <!--begin why-->
-      <div class="why">
+      <div class="why" id="why">
         <div class="why__container container">
           <div class="why__title title">почему мы?</div>
           <div class="why__list">
@@ -225,10 +227,10 @@
       </div>
       <!--end why-->
       <!--begin work-->
-      <div class="work wow fadeIn" data-wow-delay="0.5s">
+      <div class="work" id="work">
         <div class="work-for js-slider-for">
           <div class="work-for__item">
-            <div class="work-for__container container">
+            <div class="work-for__container container"><img class="work-for__img" src="img/content/work-1.png" alt="image">
               <div class="work-for__in">
                 <div class="work-for__title">как мы работаем 1</div>
                 <div class="work-for__text">Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.</div>
@@ -236,7 +238,7 @@
             </div>
           </div>
           <div class="work-for__item">
-            <div class="work-for__container container">
+            <div class="work-for__container container"><img class="work-for__img" src="img/content/work-1.png" alt="image">
               <div class="work-for__in">
                 <div class="work-for__title">как мы работаем 2</div>
                 <div class="work-for__text">Разработаем для вас идеальное свадебное предложение в рамках вашего бюджета. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы. Внимательно выслушаем вас о чем мечтаете и чего хотите.
@@ -245,7 +247,7 @@
             </div>
           </div>
           <div class="work-for__item is-active">
-            <div class="work-for__container container">
+            <div class="work-for__container container"><img class="work-for__img wow fadeIn" src="img/content/work-1.png" alt="image" data-wow-delay="0.5s">
               <div class="work-for__in fadeInLeft2 wow" data-wow-delay="1s">
                 <div class="work-for__title">как мы работаем</div>
                 <div class="work-for__text">Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.</div>
@@ -255,7 +257,7 @@
             </div>
           </div>
           <div class="work-for__item">
-            <div class="work-for__container container">
+            <div class="work-for__container container"><img class="work-for__img" src="img/content/work-1.png" alt="image">
               <div class="work-for__in">
                 <div class="work-for__title">как мы работаем 4</div>
                 <div class="work-for__text">Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.</div>
@@ -265,7 +267,7 @@
             </div>
           </div>
           <div class="work-for__item">
-            <div class="work-for__container container">
+            <div class="work-for__container container"><img class="work-for__img" src="img/content/work-1.png" alt="image">
               <div class="work-for__in">
                 <div class="work-for__title">как мы работаем 5</div>
                 <div class="work-for__text">Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.</div>
@@ -287,7 +289,7 @@
       </div>
       <!--end work-->
       <!--begin spec-->
-      <div class="spec" data-parallax="scroll" data-image-src="img/bg/spec.jpg" data-speed="0.3">
+      <div class="spec" id="spec" data-parallax="scroll" data-image-src="img/bg/spec.jpg" data-speed="0.3">
         <div class="spec__container container">
           <div class="spec__title title">спецпредложения</div>
           <div class="spec__block wow fadeInRightBig" data-wow-delay="0.5s">
@@ -300,7 +302,7 @@
       </div>
       <!--end spec-->
       <!--begin doc-->
-      <div class="doc" data-parallax="scroll" data-image-src="img/bg/doc.jpg" data-speed="0.3">
+      <div class="doc" id="doc" data-parallax="scroll" data-image-src="img/bg/doc.jpg" data-speed="0.3">
         <div class="doc__container container">
           <!--begin desc-->
           <div class="doc__desc desc js-desc">
@@ -495,7 +497,7 @@
       </div>
       <!--end stat-->
       <!--begin feed-->
-      <div class="feed">
+      <div class="feed" id="feed">
         <div class="feed__container container">
           <div class="feed__row">
             <div class="feed__col">
@@ -512,7 +514,10 @@
               </div>
               <div class="feed__content">
                 <div class="feed__subtitle">Тамара C.,<span class="feed__subtitle-date">&nbsp;19.08.2016</span></div>
-                <div class="feed__text">«Благодарю от всей души Марину, медсестру Екатерину и доктора Майго за высокий профессионализм, чуткость, терпение, внимание ко мне. Прекрасная гостиница, все отлично! Здоровья всем. Буду<a class="feed__text-link" href="#">Читать далее</a></div>
+                <div class="feed__text">«Благодарю от всей души Марину, медсестру Екатерину и доктора Майго за высокий профессионализм, чуткость, терпение, внимание ко мне. Прекрасная гостиница, все отлично! Здоровья всем. Буду<span class="feed__text-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  <a
+                    class="feed__text-link js-more-btn" href="#">Читать далее</a>
+                </div>
               </div>
             </div>
             <div class="feed__col wow fadeInRightBig" data-wow-delay="0.5s">
@@ -521,7 +526,10 @@
               </div>
               <div class="feed__content">
                 <div class="feed__subtitle">Ольга К.,<span class="feed__subtitle-date">&nbsp;10.01.2013</span></div>
-                <div class="feed__text">Здравствуйте. Моей маме в ноябре 2015 г. была удалена родинка, подозрение на меланому, гистология - лентиго меланома in situ. Мы перепроверили стекла в больнице в<a class="feed__text-link" href="#">Читать далее</a></div>
+                <div class="feed__text">Здравствуйте. Моей маме в ноябре 2015 г. была удалена родинка, подозрение на меланому, гистология - лентиго меланома in situ. Мы перепроверили стекла в больнице в<span class="feed__text-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  <a
+                    class="feed__text-link js-more-btn" href="#">Читать далее</a>
+                </div>
               </div>
             </div>
           </div>
@@ -532,8 +540,10 @@
               </div>
               <div class="feed__content">
                 <div class="feed__subtitle">Тамара C.,<span class="feed__subtitle-date">&nbsp;19.08.2016</span></div>
-                <div class="feed__text">«Большое спасибо всем сотрудникам клиники Docrates за Ваше внимательное отношение. Очень благодарна докторам Maigo Riener и Jari Viinikainen за профессионализм и чуткость. Желаю Вам здоровья, удачи и исполнения всех желаний»<a class="feed__text-link"
-                    href="#">Читать далее</a></div>
+                <div class="feed__text">«Большое спасибо всем сотрудникам клиники Docrates за Ваше внимательное отношение. Очень благодарна докторам Maigo Riener и Jari Viinikainen за профессионализм и чуткость. Желаю Вам здоровья, удачи и исполнения всех желаний»<span class="feed__text-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  <a
+                    class="feed__text-link js-more-btn" href="#">Читать далее</a>
+                </div>
               </div>
             </div>
             <div class="feed__col wow fadeInRightBig" data-wow-delay="1s">
@@ -542,7 +552,10 @@
               </div>
               <div class="feed__content">
                 <div class="feed__subtitle">Тамара C.,<span class="feed__subtitle-date">&nbsp;10.01.2013</span></div>
-                <div class="feed__text">Процедура наружной лучевой терапии похожа на обычное рентгеновское обследование. Радиация невидима, не имеет запаха и не ощущается, побочные эффекты не возникают до 2-й или 3-й недели лечения. Лучевая<a class="feed__text-link" href="#">Читать далее</a></div>
+                <div class="feed__text">Процедура наружной лучевой терапии похожа на обычное рентгеновское обследование. Радиация невидима, не имеет запаха и не ощущается, побочные эффекты не возникают до 2-й или 3-й недели лечения. Лучевая<span class="feed__text-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  <a
+                    class="feed__text-link js-more-btn" href="#">Читать далее</a>
+                </div>
               </div>
             </div>
           </div>
@@ -553,8 +566,10 @@
               </div>
               <div class="feed__content">
                 <div class="feed__subtitle">Анна Б.,<span class="feed__subtitle-date">&nbsp;10.09.2014</span></div>
-                <div class="feed__text">«Мы с мамой хотим сказать огромное спасибо всей клинике Docrates. Мы очень рады, что попали к Вам. У Вас очень уютно, очень дружественно-настроенный персонал. Все очень заботливые и хорошие. И сама клиника. Будто как дома ).<a class="feed__text-link"
-                    href="#">Читать далее</a></div>
+                <div class="feed__text">«Мы с мамой хотим сказать огромное спасибо всей клинике Docrates. Мы очень рады, что попали к Вам. У Вас очень уютно, очень дружественно-настроенный персонал. Все очень заботливые и хорошие. И сама клиника. Будто как дома ).<span class="feed__text-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  <a
+                    class="feed__text-link js-more-btn" href="#">Читать далее</a>
+                </div>
               </div>
             </div>
             <div class="feed__col wow fadeInRightBig" data-wow-delay="1.5s">
@@ -563,13 +578,16 @@
               </div>
               <div class="feed__content">
                 <div class="feed__subtitle">Анна Б.,<span class="feed__subtitle-date">&nbsp;10.01.2013</span></div>
-                <div class="feed__text">В тех случаях, когда химиотерапия недостаточно эффективна, некоторые клетки опухоли под ее воздействием не погибают, а временно замедляют свои биологические процессы и не накапливают<a class="feed__text-link" href="#">Читать далее</a></div>
+                <div class="feed__text">В тех случаях, когда химиотерапия недостаточно эффективна, некоторые клетки опухоли под ее воздействием не погибают, а временно замедляют свои биологические процессы и не накапливают<span class="feed__text-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                  <a
+                    class="feed__text-link js-more-btn" href="#">Читать далее</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="feed__row">
             <div class="feed__col wow fadeInUp" data-wow-delay="2s"><a class="feed__btn" href="#">все отзывы</a></div>
-            <div class="feed__col wow fadeInUp" data-wow-delay="2s"><a class="feed__btn" href="#">все отзывы</a></div>
+            <div class="feed__col wow fadeInUp" data-wow-delay="2s"><a class="feed__btn" href="#">все вопросы-ответы</a></div>
           </div>
         </div>
       </div>

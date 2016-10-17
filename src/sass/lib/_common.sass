@@ -623,8 +623,7 @@ img
 	----------------------------------- */
 .work
 	position: relative
-	background: url('../img/bg/work-bg.jpg') center center no-repeat
-	background-size: cover
+	background-color: #f0eadf
 	padding-bottom: 6px
 	min-height: 600px
 	&:before
@@ -641,11 +640,22 @@ img
 			&.is-active
 				display: block
 		&__container
+			position: relative
 			height: 594px
 			min-height: 594px
 			+vertical
 			text-align: left
+		&__img
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			height: 100%
+			max-width: none
+			width: auto
 		&__in
+			position: relative
+			z-index: 1
 			margin-top: -60px
 			display: inline-block
 			vertical-align: middle
@@ -890,7 +900,7 @@ img
 	&__desc
 		position: absolute
 		z-index: 2
-		margin-top: -10px
+		margin-top: 30px
 		top: 100%
 		left: 0
 		right: 0
@@ -1065,6 +1075,9 @@ img
 			background-color: #b91443
 	&__text
 		color: #000
+		&-hidden
+			display: none
+			margin-left: 5px
 		&-link
 			margin-left: 5px
 			color: #7083b9

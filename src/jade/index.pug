@@ -51,7 +51,7 @@ block content
 	//end service
 
 	//begin why
-	.why
+	.why#why
 		.why__container.container
 			.why__title.title почему мы?
 			.why__list
@@ -114,32 +114,37 @@ block content
 	//end why
 
 	//begin work
-	.work.wow.fadeIn(data-wow-delay='0.5s')
+	.work#work
 		.work-for.js-slider-for
 			.work-for__item
 				.work-for__container.container
+					img.work-for__img(src='img/content/work-1.png' alt='image')
 					.work-for__in
 						.work-for__title как мы работаем 1
 						.work-for__text Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
 			.work-for__item
 				.work-for__container.container
+					img.work-for__img(src='img/content/work-1.png' alt='image')
 					.work-for__in
 						.work-for__title как мы работаем 2
 						.work-for__text Разработаем для вас идеальное свадебное предложение в рамках вашего бюджета. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
 			.work-for__item.is-active
 				.work-for__container.container
+					img.work-for__img.wow.fadeIn(src='img/content/work-1.png' alt='image' data-wow-delay='0.5s')
 					.work-for__in.fadeInLeft2.wow(data-wow-delay='1s')
 						.work-for__title как мы работаем
 						.work-for__text Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
 						.work-for__text Разработаем для вас идеальное свадебное предложение в рамках вашего бюджета. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
 			.work-for__item
 				.work-for__container.container
+					img.work-for__img(src='img/content/work-1.png' alt='image')
 					.work-for__in
 						.work-for__title как мы работаем 4
 						.work-for__text Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
 						.work-for__text Разработаем для вас идеальное свадебное предложение в рамках вашего бюджета. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы. Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
 			.work-for__item
 				.work-for__container.container
+					img.work-for__img(src='img/content/work-1.png' alt='image')
 					.work-for__in
 						.work-for__title как мы работаем 5
 						.work-for__text Внимательно выслушаем вас о чем мечтаете и чего хотите. Расскажем о своем подходе к организации свадьбы.
@@ -154,7 +159,7 @@ block content
 	//end work
 
 	//begin spec
-	.spec(data-parallax='scroll' data-image-src='img/bg/spec.jpg' data-speed='0.3')
+	.spec#spec(data-parallax='scroll' data-image-src='img/bg/spec.jpg' data-speed='0.3')
 		.spec__container.container
 			.spec__title.title спецпредложения
 			.spec__block.wow.fadeInRightBig(data-wow-delay='0.5s')
@@ -164,7 +169,7 @@ block content
 	//end spec
 
 	//begin doc
-	.doc(data-parallax='scroll' data-image-src='img/bg/doc.jpg' data-speed='0.3')
+	.doc#doc(data-parallax='scroll' data-image-src='img/bg/doc.jpg' data-speed='0.3')
 		.doc__container.container
 			//begin desc
 			.doc__desc.desc.js-desc
@@ -306,7 +311,7 @@ block content
 	//end stat
 		
 	//begin feed
-	.feed
+	.feed#feed
 		.feed__container.container
 			.feed__row
 				.feed__col
@@ -324,7 +329,8 @@ block content
 							span.feed__subtitle-date &nbsp;19.08.2016
 						.feed__text
 							| «Благодарю от всей души Марину, медсестру Екатерину и доктора Майго за высокий профессионализм, чуткость, терпение, внимание ко мне. Прекрасная гостиница, все отлично! Здоровья всем. Буду
-							a.feed__text-link(href='#') Читать далее
+							span.feed__text-hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							a.feed__text-link.js-more-btn(href='#') Читать далее
 				.feed__col.wow.fadeInRightBig(data-wow-delay='0.5s')
 					.feed__image
 						.feed__img-wrap
@@ -335,7 +341,8 @@ block content
 							span.feed__subtitle-date &nbsp;10.01.2013
 						.feed__text
 							| Здравствуйте. Моей маме в ноябре 2015 г. была удалена родинка, подозрение на меланому, гистология - лентиго меланома in situ. Мы перепроверили стекла в больнице в
-							a.feed__text-link(href='#') Читать далее
+							span.feed__text-hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							a.feed__text-link.js-more-btn(href='#') Читать далее
 			.feed__row
 				.feed__col.wow.fadeInLeftBig(data-wow-delay='1s')
 					.feed__image
@@ -347,7 +354,8 @@ block content
 							span.feed__subtitle-date &nbsp;19.08.2016
 						.feed__text
 							| «Большое спасибо всем сотрудникам клиники Docrates за Ваше внимательное отношение. Очень благодарна докторам Maigo Riener и Jari Viinikainen за профессионализм и чуткость. Желаю Вам здоровья, удачи и исполнения всех желаний»
-							a.feed__text-link(href='#') Читать далее
+							span.feed__text-hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							a.feed__text-link.js-more-btn(href='#') Читать далее
 				.feed__col.wow.fadeInRightBig(data-wow-delay='1s')
 					.feed__image
 						.feed__img-wrap
@@ -358,7 +366,8 @@ block content
 							span.feed__subtitle-date &nbsp;10.01.2013
 						.feed__text
 							| Процедура наружной лучевой терапии похожа на обычное рентгеновское обследование. Радиация невидима, не имеет запаха и не ощущается, побочные эффекты не возникают до 2-й или 3-й недели лечения. Лучевая
-							a.feed__text-link(href='#') Читать далее
+							span.feed__text-hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							a.feed__text-link.js-more-btn(href='#') Читать далее
 			.feed__row
 				.feed__col.wow.fadeInLeftBig(data-wow-delay='1.5s')
 					.feed__image
@@ -370,7 +379,8 @@ block content
 							span.feed__subtitle-date &nbsp;10.09.2014
 						.feed__text
 							| «Мы с мамой хотим сказать огромное спасибо всей клинике Docrates. Мы очень рады, что попали к Вам. У Вас очень уютно, очень дружественно-настроенный персонал. Все очень заботливые и хорошие. И сама клиника. Будто как дома ).
-							a.feed__text-link(href='#') Читать далее
+							span.feed__text-hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							a.feed__text-link.js-more-btn(href='#') Читать далее
 				.feed__col.wow.fadeInRightBig(data-wow-delay='1.5s')
 					.feed__image
 						.feed__img-wrap
@@ -381,12 +391,13 @@ block content
 							span.feed__subtitle-date &nbsp;10.01.2013
 						.feed__text
 							| В тех случаях, когда химиотерапия недостаточно эффективна, некоторые клетки опухоли под ее воздействием не погибают, а временно замедляют свои биологические процессы и не накапливают
-							a.feed__text-link(href='#') Читать далее
+							span.feed__text-hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							a.feed__text-link.js-more-btn(href='#') Читать далее
 			.feed__row
 				.feed__col.wow.fadeInUp(data-wow-delay='2s')
 					a.feed__btn(href='#') все отзывы
 				.feed__col.wow.fadeInUp(data-wow-delay='2s')
-					a.feed__btn(href='#') все отзывы
+					a.feed__btn(href='#') все вопросы-ответы
 	//end feed
 
 	//begin request
