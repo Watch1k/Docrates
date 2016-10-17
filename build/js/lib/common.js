@@ -186,9 +186,20 @@ $(document).ready(function () {
 					nav.prepend(next);
 				}
 			} else {
-				slider.slick('unslick');
+				if ($('.slick-initialized').length) {
+					slider.slick('unslick');
+				}
 			}
 		})
+	})();
+
+	(function () {
+		var request = $('#request'),
+			btn = $('.js-request');
+
+		btn.on('click', function () {
+			$('html, body').animate({scrollTop: request.offset().top}, 1500);
+		});
 	})();
 
 });

@@ -7,7 +7,7 @@ block content
 		.start__container.container
 			.start__in
 				.start__title Лечение и диагностика рака груди
-				button.start__btn.btn.btn_white.btn_lg(type='button') оставить заявку на лечение
+				button.start__btn.btn.btn_white.btn_lg.js-request(type='button') оставить заявку на лечение
 	//end start
 
 	//begin service
@@ -47,7 +47,7 @@ block content
 					.service__subtitle.wow.fadeInDown(data-wow-delay='2s') Подбор индивидуальной программы лечения
 					.service__text.wow.fadeIn(data-wow-delay='2.5s') На сегодняшнии день существует три основных метода лечения: хирургическое лечение, лучевая терапия и химиотерапия. Помимо этого, клиника Дократес имеет возможность проведения радионуклидно терапии, иммунотерапии, биологического лечения. Также мы начинаем лечение препаратами онколитического вируса
 			.text-center
-				button.service__btn.btn.btn_red-t.btn_md(type='button') связаться с нами
+				button.service__btn.btn.btn_red-t.btn_md.js-request(type='button') связаться с нами
 	//end service
 
 	//begin why
@@ -390,21 +390,21 @@ block content
 	//end feed
 
 	//begin request
-	.request(data-parallax='scroll' data-image-src='img/bg/request.jpg' data-speed='0.3')
+	.request#request(data-parallax='scroll' data-image-src='img/bg/request.jpg' data-speed='0.3')
 		.request__container.container
 			.request__title.title online заявка
 			form.form(action='#')
 				.form__field
-					input.form__input(type='text' placeholder='вас зовут' data-validation='required')
+					input.form__input(type='text' placeholder='вас зовут' data-validation='required' data-validation-error-msg='Введите имя')
 					.icon-required *
 				.form__field
 					input.form__input(type='text' placeholder='тeлeфон')
 				.form__field
-					input.form__input(type='text' placeholder='E-mail' data-validation="email")
+					input.form__input(type='text' placeholder='E-mail' data-validation="email" data-validation-error-msg='Введите E-mail')
 					.icon-required *
 					.form__tooltip На этот E-mail  мы отправим ответ
 				.form__field
-					textarea.form__area(placeholder='вопрос / информация' data-validation="required")
+					textarea.form__area(placeholder='вопрос / информация' data-validation="required" data-validation-error-msg='Пустое поле')
 					.icon-required *
 				.form__field.form__field_md
 					.form__col
@@ -417,9 +417,9 @@ block content
 						.form__captcha
 							img(src='img/content/captcha.jpg' alt='image')
 					.form__col
-						.form__rel
+						.form__rel.error-right
 							.form__arrow →
-							input.form__input.form__code(type='text' placeholder='Код' data-validation='required')
+							input.form__input.form__code(type='text' placeholder='Код' data-validation='required' data-validation-error-msg='Неправильный ответ')
 							.icon-required *
 				.form__field.form__field_lg
 					button.form__submit(type='submit') отправить

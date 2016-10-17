@@ -1134,6 +1134,9 @@ img
 		border: 1px solid #d0d0d0
 		text-transform: uppercase
 		+placeholder-color(rgba(0, 29, 49, .9))
+		&.error
+			border-width: 2px
+			border-color: #b91443
 		&:focus ~ .form__tooltip
 			opacity: 1
 	&__area
@@ -1149,6 +1152,9 @@ img
 		resize: none
 		border: 1px solid #d0d0d0
 		+placeholder-color(rgba(0, 29, 49, .9))
+		&.error
+			border-width: 2px
+			border-color: #b91443
 	&__tooltip
 		position: absolute
 		top: 0
@@ -1273,7 +1279,34 @@ img
 			background-color: #ffffff
 			color: #b91443
 	.form-error
-		display: none
+		position: absolute
+		top: 0
+		right: 100%
+		padding: 10px 15px
+		white-space: nowrap
+		margin-right: 20px
+		font-size: 18px
+		color: #b91443
+		line-height: 1
+		background-color: rgba(255, 255, 255, .5)
+		border-radius: 5px
+		pointer-events: none
+		letter-spacing: -0.02em
+		&:before
+			position: absolute
+			right: -8px
+			top: 11px
+			+arr(8,16,rgba(255, 255, 255, .5),r)
+			content: ''
+	.error-right .form-error
+		right: auto
+		left: 100%
+		margin-left: 40px
+		margin-right: 0
+		&:before
+			right: auto
+			left: -8px
+			+arr(8,16,rgba(255, 255, 255, .5),l)
 	.form__error
 		position: absolute
 		top: 100%

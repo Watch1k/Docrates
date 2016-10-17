@@ -24,7 +24,7 @@
           <nav class="header__nav nav"><a class="nav__link" href="#">почему мы?</a><a class="nav__link" href="#">как мы работаем</a><a class="nav__link" href="#">специалисты</a><a class="nav__link" href="#">спецпредложения</a><a class="nav__link" href="#">отзывы</a><a class="nav__link"
               href="#">контакты</a></nav>
           <!-- end main-nav-->
-          <button class="header__btn btn btn_red" type="button">оставить заявку</button>
+          <button class="header__btn btn btn_red js-request" type="button">оставить заявку</button>
         </div>
       </div>
       <div class="header__bot">
@@ -68,7 +68,7 @@
         <div class="start__container container">
           <div class="start__in">
             <div class="start__title">Лечение и диагностика рака груди</div>
-            <button class="start__btn btn btn_white btn_lg" type="button">оставить заявку на лечение</button>
+            <button class="start__btn btn btn_white btn_lg js-request" type="button">оставить заявку на лечение</button>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
             </div>
           </div>
           <div class="text-center">
-            <button class="service__btn btn btn_red-t btn_md" type="button">связаться с нами</button>
+            <button class="service__btn btn btn_red-t btn_md js-request" type="button">связаться с нами</button>
           </div>
         </div>
       </div>
@@ -575,24 +575,24 @@
       </div>
       <!--end feed-->
       <!--begin request-->
-      <div class="request" data-parallax="scroll" data-image-src="img/bg/request.jpg" data-speed="0.3">
+      <div class="request" id="request" data-parallax="scroll" data-image-src="img/bg/request.jpg" data-speed="0.3">
         <div class="request__container container">
           <div class="request__title title">online заявка</div>
           <form class="form" action="#">
             <div class="form__field">
-              <input class="form__input" type="text" placeholder="вас зовут" data-validation="required">
+              <input class="form__input" type="text" placeholder="вас зовут" data-validation="required" data-validation-error-msg="Введите имя">
               <div class="icon-required">*</div>
             </div>
             <div class="form__field">
               <input class="form__input" type="text" placeholder="тeлeфон">
             </div>
             <div class="form__field">
-              <input class="form__input" type="text" placeholder="E-mail" data-validation="email">
+              <input class="form__input" type="text" placeholder="E-mail" data-validation="email" data-validation-error-msg="Введите E-mail">
               <div class="icon-required">*</div>
               <div class="form__tooltip">На этот E-mail мы отправим ответ</div>
             </div>
             <div class="form__field">
-              <textarea class="form__area" placeholder="вопрос / информация" data-validation="required"></textarea>
+              <textarea class="form__area" placeholder="вопрос / информация" data-validation="required" data-validation-error-msg="Пустое поле"></textarea>
               <div class="icon-required">*</div>
             </div>
             <div class="form__field form__field_md">
@@ -609,9 +609,9 @@
                 <div class="form__captcha"><img src="img/content/captcha.jpg" alt="image"></div>
               </div>
               <div class="form__col">
-                <div class="form__rel">
+                <div class="form__rel error-right">
                   <div class="form__arrow">→</div>
-                  <input class="form__input form__code" type="text" placeholder="Код" data-validation="required">
+                  <input class="form__input form__code" type="text" placeholder="Код" data-validation="required" data-validation-error-msg="Неправильный ответ">
                   <div class="icon-required">*</div>
                 </div>
               </div>
