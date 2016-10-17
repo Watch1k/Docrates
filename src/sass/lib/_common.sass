@@ -26,7 +26,7 @@ $default-fonts: Arial, sans-serif
 	 =================================== */
 body
 	position: relative
-	min-width: 320px
+	min-width: 1200px
 	+calibri
 	font-size: 16px
 	color: #001d31
@@ -45,6 +45,7 @@ body
 	padding-left: 20px
 	padding-right: 20px
 	max-width: 1568px
+	min-width: 1200px
 	+pie-clearfix
 
 
@@ -265,6 +266,9 @@ img
 	line-height: 20px
 	text-transform: uppercase
 	+pie-clearfix
+	+r(1439)
+		position: relative
+		left: -30px
 	&__link
 		float: left
 		margin-left: 22px
@@ -273,6 +277,10 @@ img
 		+trs
 		&:hover
 			color: #7c7c7c
+		+r(1439)
+			margin-left: 11px
+			margin-right: 11px
+		
 	
 	
 
@@ -287,6 +295,8 @@ img
 	&__logo
 		float: left
 		margin-right: 90px
+		+r(1439)
+			margin-right: 50px
 	&__info
 		overflow: hidden
 		padding-top: 40px
@@ -322,6 +332,9 @@ img
 	margin-right: -3%
 	width: calc(100% - 175px)
 	+pie-clearfix
+	+r(1439)
+		margin-right: 0
+		width: calc(100% - 135px)
 	&__col
 		position: relative
 		float: left
@@ -447,6 +460,8 @@ img
 	padding-bottom: 75px
 	background: #efd4bd url('../img/bg/why-bg.jpg') center top no-repeat
 	background-size: auto 100%
+	+r(1439)
+		background-position: 60% center
 	&__list
 		margin-top: 70px
 		font-size: 0
@@ -457,13 +472,19 @@ img
 		width: 30%
 		color: #001d31
 		vertical-align: top
+		+r(1439)
+			width: 33.3%
 		&:nth-child(2)
 			width: 35%
 			margin-right: 20%
+			+r(1439)
+				width: 33.3%
 			& ~ .why__item
 				vertical-align: bottom
 		&:nth-child(4)
 			padding-right: 30px
+			+r(1439)
+				padding-right: 40px
 	&__subtitle
 		position: relative
 		font-size: 21px
@@ -496,9 +517,13 @@ img
 	margin-right: -100px
 	background-color: #ffffff
 	box-shadow: 0 5px 5px rgba(0, 1, 1, 0.13)
+	+r(1800)
+		margin-left: auto
+		margin-right: auto
 	&__container
 		padding-top: 150px
 		padding-bottom: 80px
+		min-width: 0
 	&__row
 		padding-top: 75px
 		padding-bottom: 50px
@@ -510,7 +535,10 @@ img
 			padding-bottom: 0
 	&__col2
 		float: left
-		width: 50%
+		width: auto
+		& + &
+			float: none
+			overflow: hidden
 	&__col3
 		float: left
 		width: 33.33%
@@ -533,6 +561,9 @@ img
 	&__image
 		position: relative
 		float: left
+		margin-right: 50px
+		+r(1600)
+			margin-right: 20px
 		&:before
 			content: ''
 			position: absolute
@@ -542,8 +573,6 @@ img
 			bottom: 0
 			background-color: transparent
 			+trs
-		& + &
-			margin-left: 50px
 		&-icon
 			opacity: 0
 			width: 48px
@@ -676,6 +705,8 @@ img
 		padding: 50px 100px 60px 60px
 		color: #ffffff
 		background-color: rgba(185, 20, 67, .8)
+		+r(1439)
+			padding-right: 50px
 		&:before
 			content: ''
 			position: absolute
@@ -744,7 +775,9 @@ img
 		cursor: pointer
 		position: absolute
 		top: 25px
-		left: 0
+		left: -20px
+		padding-left: 20px
+		padding-right: 20px
 		color: #b91443
 		+trs
 		&:hover
@@ -753,7 +786,9 @@ img
 		cursor: pointer
 		position: absolute
 		top: 25px
-		right: 0
+		padding-left: 20px
+		padding-right: 20px
+		right: -20px
 		color: #b91443
 		+trs
 		&:hover
@@ -838,7 +873,7 @@ img
 		margin-right: -80px
 		background-color: #ffffff
 		box-shadow: 0 5px 5px rgba(0, 1, 1, 0.13)
-		+r(1600)
+		+r(1800)
 			margin-left: 20px
 			margin-right: 20px
 	&__list
@@ -922,7 +957,12 @@ img
 		color: #b91443
 		text-align: center
 		background-color: #ffffff
+		+r(1439)
+			padding-left: 40px
+			padding-right: 40px
 		&:nth-child(2)
+			position: relative
+			top: -25px
 			width: 38%
 			color: #ffffff
 			background-color: transparent
@@ -1085,6 +1125,11 @@ img
 		opacity: 0
 		letter-spacing: -0.02em
 		+trs
+		+r(1439)
+			padding-left: 20px
+			padding-right: 20px
+			width: 245px
+			white-space: normal
 		&:before
 			position: absolute
 			left: -8px

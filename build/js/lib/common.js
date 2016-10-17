@@ -8,7 +8,8 @@ $(document).ready(function () {
 	$.validate({
 		validateOnBlur : true,
 		showHelpOnFocus : false,
-		addSuggestions : false
+		addSuggestions : false,
+		scrollToTopOnError: false
 	});
 
 	// Clear placeholder
