@@ -212,6 +212,7 @@ $(document).ready(function () {
 			var id = $(this).attr('href');
 			$('html, body').animate({scrollTop: $(id).offset().top - 77}, 1500);
 		});
+		console.log('lol');
 	})();
 
 	(function () {
