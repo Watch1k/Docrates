@@ -3,12 +3,16 @@ $default-fonts: Arial, sans-serif
 
 +font('Calibri', 'Calibri')
 +font('Calibri Light', 'Calibri-Light')
++font('Calibri Bold', 'Calibri-Bold')
 
 =calibri
 	font-family: 'Calibri', $default-fonts
 	
 =calibri-light
 	font-family: 'Calibri Light', $default-fonts
+	
+=calibri-bold
+	font-family: 'Calibri Bold', $default-fonts
 
 // colors
 // $black: #000
@@ -163,6 +167,8 @@ img
 	right: 0
 	color: #ffffff
 	+trs
+	&.is-active
+		height: 77px
 	.container
 		position: relative
 	&__top
@@ -203,12 +209,15 @@ img
 		transform: translateY(13px)
 	&__bot
 		position: relative
+	&.is-active &__bot
+		pointer-events: none
 	&__logo
 		float: left
 		margin-top: 13px
 		+trs
 	&.is-active &__logo
 		transform: scale(0.57) translateY(-175px) translateX(-70px)
+		pointer-events: auto
 	&__info
 		float: right
 		padding-top: 60px
@@ -391,6 +400,7 @@ img
 		padding-left: 20px
 		padding-right: 20px
 	&__image
+		display: block
 		position: relative
 		margin-left: -10px
 		margin-bottom: 35px
@@ -472,7 +482,7 @@ img
 		font-size: 16px
 	&__btn
 		position: relative
-		z-index: 2
+		z-index: 6
 		margin-top: 70px
 		
 .text
@@ -692,11 +702,121 @@ img
 		
 /* Doc
 	----------------------------------- */
+.desc
+	opacity: 0
+	pointer-events: none
+	padding-top: 40px
+	padding-bottom: 40px
+	+trs
+	&.is-active
+		opacity: 1
+		pointer-events: auto
+	&__top
+		position: relative
+		text-align: center
+		letter-spacing: 0.08em
+		padding-bottom: 55px
+	&__prev
+		cursor: pointer
+		position: absolute
+		top: 25px
+		left: 0
+		color: #b91443
+		+trs
+		&:hover
+			color: #959595
+	&__next
+		cursor: pointer
+		position: absolute
+		top: 25px
+		right: 0
+		color: #b91443
+		+trs
+		&:hover
+			color: #959595
+	&__title
+		margin-bottom: 20px
+		font-size: 30px
+		color: #b91443
+		text-transform: uppercase
+		letter-spacing: 0.24em
+	&__subtitle
+		+calibri-bold
+		font-size: 16px
+		text-transform: uppercase
+		&-normal
+			margin-left: 5px
+			+calibri
+	&__bot
+		display: table
+		width: 100%
+		+pie-clearfix
+	&__col
+		display: table-cell
+		padding-right: 40px
+		vertical-align: top
+		height: 475px
+		& + &
+			padding-top: 50px
+			padding-bottom: 50px
+			padding-right: 0
+			border-top: 1px solid #ccc
+			border-bottom: 1px solid #ccc
+			p
+				padding-right: 20px
+				+ p
+					margin-top: 25px
+		&-in
+			overflow: auto
+			height: 375px
+			&::-webkit-scrollbar
+				width: 2px
+			&::-webkit-scrollbar-track
+				background-color: #e3e4e6
+				border: none
+			&::-webkit-scrollbar-thumb
+				background-color: #b91443
+			&::-webkit-scrollbar-thumb:hover
+				background-color: #b91443
+	&__img
+		max-width: none
+	&__close
+		display: block
+		margin-top: 40px
+		margin-left: auto
+		margin-right: auto
+		width: 216px
+		height: 50px
+		font-size: 16px
+		text-transform: uppercase
+		line-height: 50px
+		border: 1px solid rgba(0, 0, 0, .3)
+		+trs
+		&:hover
+			color: #b91443
+			border-color: #b91443
+	
 .doc
 	padding-top: 110px
 	padding-bottom: 100px
 	background: url(../img/bg/doc.jpg) center center no-repeat
 	background-size: cover
+	&__container
+		position: relative
+	&__desc
+		position: absolute
+		z-index: 2
+		margin-top: -10px
+		top: 100%
+		left: 0
+		right: 0
+		margin-left: -80px
+		margin-right: -80px
+		background-color: #ffffff
+		box-shadow: 0 5px 5px rgba(0, 1, 1, 0.13)
+		+r(1600)
+			margin-left: 20px
+			margin-right: 20px
 	&__list
 		margin-top: 65px
 		+pie-clearfix
