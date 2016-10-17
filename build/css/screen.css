@@ -4219,6 +4219,10 @@ img { max-width: 100%; vertical-align: top; }
 
 .work-for__img { position: absolute; top: 0; right: 0; bottom: 0; height: 100%; max-width: none; width: auto; }
 
+@media only screen and (max-width: 1599px) { .work-for__img { right: -10%; } }
+
+@media only screen and (max-width: 1439px) { .work-for__img { right: -20%; } }
+
 .work-for__in { position: relative; z-index: 1; margin-top: -60px; display: inline-block; vertical-align: middle; padding-left: 60px; }
 
 .work-for__title { position: relative; font-size: 30px; color: #b91443; text-transform: uppercase; }
