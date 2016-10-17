@@ -323,4 +323,15 @@ $(document).ready(function () {
 		});
 	})();
 
+	(function () {
+		var header = $('.js-header');
+		$(window).scroll(function () {
+			if ($(document).scrollTop() > 5) {
+				header.addClass('is-active');
+			} else {
+				header.removeClass('is-active');
+			}
+		});
+	})();
+
 });

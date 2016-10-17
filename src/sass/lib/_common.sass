@@ -162,6 +162,7 @@ img
 	top: 0
 	right: 0
 	color: #ffffff
+	+trs
 	.container
 		position: relative
 	&__top
@@ -169,10 +170,17 @@ img
 		height: 48px
 		text-align: center
 		background-color: #000000
+		+trs
+	&.is-active &__top
+		height: 77px
+		background-color: rgba(0, 0, 0, .8)
 	&__nav
 		position: relative
 		z-index: 1
 		padding-top: 14px
+		+trs
+	&.is-active &__nav
+		transform: translateY(13px)
 	&__phone
 		position: absolute
 		z-index: 1
@@ -181,20 +189,34 @@ img
 		font-size: 21px
 		color: #ffe9be
 		line-height: 1
+		+trs
+	&.is-active &__phone
+		pointer-events: none
+		opacity: 0
 	&__btn
 		position: absolute
 		z-index: 1
 		top: 5px
 		right: 20px
+		+trs
+	&.is-active &__btn
+		transform: translateY(13px)
 	&__bot
 		position: relative
 	&__logo
 		float: left
 		margin-top: 13px
+		+trs
+	&.is-active &__logo
+		transform: scale(0.57) translateY(-175px) translateX(-70px)
 	&__info
 		float: right
 		padding-top: 60px
 		+pie-clearfix
+		+trs
+	&.is-active &__info
+		opacity: 0
+		pointer-events: none
 	&__block
 		float: right
 		font-size: 20px
