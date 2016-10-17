@@ -352,6 +352,7 @@ $(document).ready(function () {
 
 		item.on('click', function () {
 			var index = $(this).index();
+			desc.attr('data-index', index + 1);
 			desc.addClass('is-active');
 			descHeader.html(header.eq(index));
 			descImage.html(image.eq(index));
@@ -376,10 +377,12 @@ $(document).ready(function () {
 				descText.html(text.eq(descIndex - 1));
 				descIndex--;
 			}
+			desc.attr('data-index', descIndex + 1);
 		});
 
 		descNext.on('click', function () {
 			descIndex++;
+			desc.attr('data-index', descIndex + 1);
 			if (descIndex < item.length) {
 				descHeader.html(header.eq(descIndex));
 				descImage.html(image.eq(descIndex));

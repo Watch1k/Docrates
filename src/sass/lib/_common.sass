@@ -703,6 +703,7 @@ img
 /* Doc
 	----------------------------------- */
 .desc
+	position: relative
 	opacity: 0
 	pointer-events: none
 	padding-top: 40px
@@ -711,6 +712,29 @@ img
 	&.is-active
 		opacity: 1
 		pointer-events: auto
+	.desc__arr
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: -40px
+			left: 10%
+			margin-top: -25px
+			margin-left: -30px
+			+arr(60,25,#ffffff,t)
+			+trs
+	&[data-index='2'] &__arr
+		&:before
+			left: 30%
+	&[data-index='3'] &__arr
+		&:before
+			left: 50%
+	&[data-index='4'] &__arr
+		&:before
+			left: 70%
+	&[data-index='5'] &__arr
+		&:before
+			left: 90%
 	&__top
 		position: relative
 		text-align: center
