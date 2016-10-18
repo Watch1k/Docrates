@@ -412,27 +412,34 @@ $(document).ready(function () {
 			slider.slick({
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>'
+				nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>',
+				prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>'
 			});
 
 			var next = slider.find('.slick-next'),
+				prev = slider.find('.slick-prev'),
 				nav = $('.js-slick-nav');
 
+			nav.prepend(prev);
 			nav.prepend(next);
 		}
 
 		$(window).resize(function () {
 			if ($(window).width() < 1600) {
 				if (!$('.slick-initialized').length) {
+					slider.find('.wow').removeClass('wow');
 					slider.slick({
 						slidesToShow: 3,
 						slidesToScroll: 1,
-						nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>'
+						nextArrow: '<button type="button" class="slick-next"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>',
+						prevArrow: '<button type="button" class="slick-prev"><svg class="icon icon-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-right"></use></svg></button>'
 					});
 
 					var next = slider.find('.slick-next'),
+						prev = slider.find('.slick-prev'),
 						nav = $('.js-slick-nav');
 
+					nav.prepend(prev);
 					nav.prepend(next);
 				}
 			} else {

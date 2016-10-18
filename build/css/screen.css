@@ -4105,13 +4105,16 @@ img { max-width: 100%; vertical-align: top; }
 
 .service__list:after { content: ""; display: table; clear: both; }
 
-@media only screen and (max-width: 1599px) { .service__list { margin-left: 20px; margin-right: 20px; width: 70%; }
-  .service__list .slick-list { overflow: visible; margin-right: -25%; }
-  .service__list .slick-prev { display: none !important; } }
+@media only screen and (max-width: 1599px) { .service__list { margin-left: auto; margin-right: auto; width: 80%; }
+  .service__list .slick-list { overflow: visible; } }
 
 .service .slick-next { display: none; position: absolute; z-index: 1; top: 0; bottom: 0; right: 0; width: 150px; color: #b91443; background: url(../img/bg/slider-bg.png) -50px top repeat-y; }
 
 @media only screen and (max-width: 1599px) { .service .slick-next { display: block; } }
+
+.service .slick-prev { display: none; position: absolute; z-index: 1; top: 0; bottom: 0; left: 0; width: 150px; color: #b91443; background: url(../img/bg/slider-bg.png) -50px top repeat-y; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+
+@media only screen and (max-width: 1599px) { .service .slick-prev { display: block; } }
 
 .service__item { float: left; width: 20%; padding-left: 20px; padding-right: 20px; }
 
