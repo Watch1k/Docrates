@@ -276,10 +276,14 @@ $(document).ready(function () {
 			content = btn.siblings('.js-text');
 
 		btn.on('click', function () {
+			$(this).toggleClass('is-open');
 			$(this).text(function (i, text) {
 				return text === 'Скрыть' ? 'Подробнее' : 'Скрыть';   // toggle button text
 			});
 			content.slideToggle();
+			if ($(this).hasClass('is-open')) {
+				$('html, body').animate({scrollTop: $(this).offset().top - 100}, 1000);
+			}
 		});
 	})();
 
@@ -361,6 +365,7 @@ $(document).ready(function () {
 			descImage.html(image.eq(index));
 			descText.html(text.eq(index));
 			descIndex = index;
+			$('html, body').animate({scrollTop: desc.offset().top - 110}, 1000);
 		});
 
 		descClose.on('click', function () {
